@@ -395,67 +395,67 @@
 
         </section>
         <section>
-            <h1>Conformance</h1>
+            <h1>Megfelelőség</h1>
 
-            <p>This section lists requirements for <a>conformance</a> to WCAG 2.2. It also gives information about how to make conformance claims, which are optional. Finally, it describes what it means to be <a>accessibility supported</a>, since only accessibility-supported ways of using technologies can be <a>relied upon</a> for conformance. <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance">Understanding Conformance</a> includes further explanation of the accessibility-supported concept.</p>
+            <p>Ez a szakasz felsorolja a WCAG 2.2 <a>megfelelőségi</a>. Továbbá arról is tájékoztat, hogy hogyan tegyünk megfelelőségi nyilatkozatot, amely azonban nem kötelező jellegű. Végül leírja, mit jelent az, hogy <a>akadálymentesítést támogató</a>, mivel a megfelelőség csak az akadálymentesítést támogató technológiákra <a> épülhet</a>. A <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance">Megfelelőség értelmezése</a> oldal az "akadálymentesítést támogató koncepció" további magyarázatát foglalja magába.</p>
         	
         	<section id="interpreting-normative-requirements">
-        		<h2>Interpreting Normative Requirements</h2>
+        		<h2>Megfelelőségi követelmények értelmezése </h2>
         		
-        		<p>The main content of WCAG 2.2 is <a>normative</a> and defines requirements that impact conformance claims. Introductory material, appendices, sections marked as "non-normative", diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
-        		<p>The key words MAY, MUST, MUST NOT, NOT RECOMMENDED, RECOMMENDED, SHOULD, and SHOULD NOT are to be interpreted as described in [[RFC2119]].</p>
+        		<p>A WCAG 2.2 fő tartalma <a>kötelező érvényű (normatív)</a>, és olyan követelményeket határoz meg, amelyek befolyásolják a megfelelőségi nyilatkozatokat. A bevezető anyagok, mellékletek, „nem normatív” jelzéssel ellátott szakaszok, ábrák, példák és megjegyzések <a>tájékoztató jellegűek</a> (nem normatívak). A nem normatív anyagok tanácsadó jellegű információkat nyújtanak az irányelvek értelmezésének megkönnyítésére, de nem hoznak létre olyan követelményeket, amelyek hatással lennének a megfelelőségi nyilatkozatokra.</p>
+        		<p>A LEHET (MAY), KÖTELEZŐ (MUST), TILOS (MUST NOT), NEM AJÁNLOTT (NOT RECOMMENDED), AJÁNLOTT (RECOMMENDED), JAVASOLT (SHOULD) és NEM JAVASOLT (SHOULD NOT) kulcsszavakat az [[RFC2119]] leírása szerint kell értelmezni.</p>
         	</section>
 
             <section id="conformance-reqs">
-                <h2>Conformance Requirements</h2>
-                <p>In order for a Web page to conform to WCAG 2.2, all of the following conformance requirements must be satisfied:</p>
+                <h2>Megfelelőségi követelmények</h2>
+                <p>Annak érdekében, hogy egy weboldal megfeleljen a WCAG 2.2 elvárásainak, az összes alábbi megfelelőségi követelménynek eleget kell tennie:</p>
 
 				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
                 <section id="cc1">
-                    <h3>Conformance Level</h3>
-                    <p>One of the following levels of conformance is met in full.</p>
+                    <h3>Megfelelőségi szint</h3>
+                    <p>Az alábbi megfelelőségi szintek közül az egyik egészében teljesül. </p>
                     <ul>
-                        <li id="cc1_A">For Level A conformance (the minimum level of conformance), the <a>Web page</a>
-                            <a>satisfies</a> all the Level A Success Criteria, or a <a>conforming alternate version</a> is provided.</li>
-                        <li id="cc1_AA">For Level AA conformance, the Web page satisfies all the Level A and Level AA Success Criteria, or a Level AA conforming alternate version is provided.</li>
-                        <li id="cc1_AAA">For Level AAA conformance, the Web page satisfies all the Level A, Level AA and Level AAA Success Criteria, or a Level AAA conforming alternate version is provided.</li>
+                        <li id="cc1_A">Az A szintű megfelelőséghez (a minimális megfelelőség szintje) a <a>weboldalnak</a>
+                            <a>meg kell felelnie</a> az összes A szintű teljesítési követelménynek, vagy egy <a>megfelelő alternatív változat </a> biztosítása szükséges.</li>
+                        <li id="cc1_AA"> Az AA szintű megfelelőséghez a weboldalnak meg kell felelnie az összes A szintű valamint az összes AA szintű teljesítési feltételnek, vagy egy AA szintű megfelelő alternatív változat biztosítása szükséges.</li>
+                        <li id="cc1_AAA">Az AAA szintű megfelelőséghez a weboldalnak meg kell felelnie az összes A szintű, az összes AA szintű, valamint az összes AAA szintű teljesítési feltételnek, vagy egy AAA szintű megfelelő alternatív változat biztosítása szükséges.</li>
                     </ul>
-                    <p class="note">Although conformance can only be achieved at the stated levels, authors are encouraged to report (in their claim) any progress toward meeting success criteria from all levels beyond the achieved level of conformance.</p>
-                    <p class="note">It is not recommended that Level AAA conformance be required as a general policy for entire sites because it is not possible to satisfy all Level AAA Success Criteria for some content.</p>
+                    <p class="note">Habár a megfelelőség csak a megállapított szinteken érhető el, a tartalom szerzőket arra biztatjuk, hogy az elért megfelelőségi szinten túl a további szintek teljesítési követelményeit is próbálják teljesíteni, és tüntessék fel az oldalon az elért eredményeket.</p>
+                    <p class="note">Nem javasolt, hogy a teljes webhely esetében az AAA szintnek megfelelő követelmény legyen az irányadó, mert bizonyos tartalmak esetében az összes AAA szintű teljesítési követelménynek nem lehet megfelelni.</p>
                 </section>
 
             	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
             	<section id="cc2">
-                    <h3>Full pages</h3>
-                    <p><a>Conformance</a> (and conformance level) is for full <a>Web page(s)</a> only, and cannot be achieved if part of a Web page is excluded.</p>
-                    <p class="note">For the purpose of determining conformance, alternatives to part of a page's content are considered part of the page when the alternatives can be obtained directly from the page, e.g., a long description or an alternative presentation of a video.</p>
-                    <p class="note">Authors of Web pages that cannot conform due to content outside of the author's control may consider a <a href="#conformance-partial">Statement of Partial Conformance</a>.</p>
-                  <p class="note">A full page includes each variation of the page that is automatically presented by the page for various screen sizes (e.g. variations in a responsive Web page). Each of these variations needs to conform (or needs to have a conforming alternate version) in order for the entire page to conform.</p>
+                    <h3>Teljes oldalak</h3>
+                    <p><a> A megfelelőség </a> (megfelelőségi szint) csak teljes <a>weboldal(ak)ra</a> érvényes, és nem tekinthető teljesítettnek, ha a weboldal egy része nem éri el a megfelelősségi szintet.</p>
+                    <p class="note">A megfelelőség szempontjából az oldal tartalmának egyik részére vonatkozó alternatívát az oldal részének tekintik, amennyiben az alternatív tartalom közvetlenül az oldalról hozzáférhető, például egy hosszú leírás és alternatív videó megjelenítése esetében.</p>
+                    <p class="note">Azok a weboldalak, melyek nem megfelelőek, mivel bizonyos tartalom a szerző ellenőrzésén kívül áll, <a href="#conformance-partial">Részleges megfelelőségi nyilatkozatot</a> tehetnek.</p>
+                  <p class="note">Egy teljes oldal magában foglalja az oldal minden olyan változatát, amelyet automatikusan megjelenít különböző képernyőméretekhez (például egy reszponzív weboldal változatai). Az összes ilyen változatnak meg kell felelnie (vagy rendelkeznie kell egy megfelelőségi követelményeknek megfelelő alternatív verzióval), hogy az egész oldal megfeleljen.</p>
                 </section>
 
             	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
             	<section id="cc3">
-                    <h3>Complete processes</h3>
-                    <p>When a <a>Web page</a> is one of a series of Web pages presenting a <a>process</a> (i.e., a sequence of steps that need to be completed in order to accomplish an activity), all Web pages in the process conform at the specified level or better. (Conformance is not possible at a particular level if any page in the process does not conform at that level or better.)</p>
-                    <aside class="example"><p>An online store has a series of pages that are used to select and purchase products. All pages in the series from start to finish (checkout) conform in order for any page that is part of the process to conform.</p></aside>
+                    <h3>Teljes folyamatok</h3>
+                    <p>Amikor egy <a>weboldal</a> egy <a>folyamat</a> bemutatását végző weboldalhalmaz egyik eleme (azaz lépések sorozata, melyeket sorra kell venni egy cselekvés végrehajtásának érdekében), a folyamatban résztvevő összes weboldalnak el kell érnie a meghatározott megfelelőségi szintet, vagy annál jobbnak kell lennie. (A megfelelőség bizonyos szinten nem lehetséges, ha a folyamatban szereplő bármelyik oldal nem felel meg az adott vagy magasabb szintnek.)</p>
+                    <aside class="example"><p>Egy online áruháznak van egy oldalsorozata, ahol az árukat ki lehet választani és megvásárolni. A sorozat összes oldala a kezdettől a végéig (fizetés) megfelelő, annak érdekében, hogy a folyamatban résztvevő bármelyik oldal megfelelő legyen.</p></aside>
                 </section>
 
             	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
             	<section id="cc4">
-                    <h3>Only Accessibility-Supported Ways of Using Technologies</h3>
+                    <h3>Kizárólag akadálymentesítést támogató technológiák</h3>
 
-                    <p>Only <a>accessibility-supported</a> ways of using <a>technologies</a> are <a>relied upon</a> to satisfy the success criteria. Any information or functionality that is provided in a way that is not accessibility supported is also available in a way that is accessibility supported. (See <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">Understanding accessibility support</a>.)</p>
+                    <p>Csak az <a>akadálymentesítést támogató</a> <a> technológiákra</a> <a>építve</a> lehet a teljesítési követelményeknek eleget tenni. Bármilyen információ vagy funkció, amelyet nem akadálymentesítést támogató technológiákkal valósítanak meg, szintén elérhető az akadálymentesítést támogató technológiákon keresztül (tekintse meg az <a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance#accessibility-support">Akadálymentesítést támogató - értelmezés</a> oldalt).</p>
 
                 </section>
 
             	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
             	<section id="cc5">
-                    <h3>Non-Interference</h3>
-                    <p>If <a> technologies </a> are used in a way that is not <a>accessibility supported</a>, or if they are used in a non-conforming way, then they do not block the ability of users to access the rest of the page. In addition, the <a>Web page</a> as a whole continues to meet the conformance requirements under each of the following conditions:</p>
+                    <h3>Nem akadályoz (Non-Interference)</h3>
+                    <p>Ha azok a <a>  technológiák  </a> amelyeket az oldalon használnak, nem <a>akadálymentesítést támogatók</a>, vagy az akadálymentesítést támogató technológiákat nem megfelelő módon használják, akkor ezek nem akadályozzák a felhasználót az oldal többi részének elérésében. Továbbá a az egész <a>weboldal</a> továbbra is teljesíti a megfelelőségi követelményeket az összes alábbi esetben:</p>
                     <ol>
-                        <li>when any technology that is not <a>relied upon</a> is turned on in a user agent,</li>
-                        <li>when any technology that is not relied upon is turned off in a user agent, and</li>
-                        <li>when any technology that is not relied upon is not supported by a user agent</li>
+                        <li>amikor bármely technológia a felhasználói programban kapcsolódik be, mely nem akadálymentesítést támogató alapra van <a>építve </a>,</li>
+                        <li>amikor a felhasználói programban kapcsolódik ki, és</li>
+                        <li>amikor a felhasználói program által nem támogatott.</li>
                     </ol>
                     <p>In addition, the following success criteria apply to all content on the page, including content that is not otherwise relied upon to meet conformance, because failure to meet them could interfere with any use of the page:</p>
                     <ul>
