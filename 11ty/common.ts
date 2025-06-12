@@ -18,8 +18,8 @@ export const resolveDecimalVersion = (version: `${number}`) => version.split("")
 
 /** Sort function for ordering WCAG principle/guideline/SC numbers ascending */
 export function wcagSort(
-  a: Principle | Guideline | SuccessCriterion,
-  b: Principle | Guideline | SuccessCriterion
+  a: WcagItem,
+  b: WcagItem
 ) {
   const aParts = a.num.split(".").map((n) => +n);
   const bParts = b.num.split(".").map((n) => +n);
