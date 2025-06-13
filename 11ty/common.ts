@@ -2,7 +2,7 @@
 
 import { AxiosError, type AxiosResponse } from "axios";
 
-import type { Guideline, Principle, SuccessCriterion } from "./guidelines";
+import type { WcagItem } from "./guidelines";
 
 /** Generates an ID for heading permalinks. Equivalent to wcag:generate-id in base.xslt. */
 export function generateId(title: string) {

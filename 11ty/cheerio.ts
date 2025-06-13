@@ -1,4 +1,4 @@
-import { load, type CheerioOptions } from "cheerio";
+import { load, type CheerioAPI, type CheerioOptions } from "cheerio";
 import { readFileSync } from "fs";
 import { readFile } from "fs/promises";
 import { dirname, resolve } from "path";
