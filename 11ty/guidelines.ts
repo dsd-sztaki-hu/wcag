@@ -359,7 +359,7 @@ export const getErrataForVersion = async (version: WcagVersion) => {
           // Remove parenthetical github references (still in Liquid syntax)
           .replace(/\(\{%.*%\}\)\s*$/, "")
           .replace(/^(\w)/, (_, p1) => p1.toUpperCase());
-
+      
       $el.find(aSelector).each((_, aEl) => {
         const $aEl = $(aEl);
         let hash: string | undefined = $aEl.attr("href")!.replace(/^.*#/, "");
