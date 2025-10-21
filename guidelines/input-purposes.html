@@ -1,65 +1,65 @@
 <section id="input-purposes">
-	<h2>Input Purposes for User Interface Components</h2>
-	<p>This section contains a listing of common <a>user interface component</a> input purposes. The terms below are not keywords that must be used, but instead represent purposes that must be captured in the taxonomy adopted by a webpage. Where applicable, authors mark up controls with the chosen taxonomy to indicate the semantic purpose. This provides the potential for user agents and assistive technologies to apply personalized presentations that can enable more people to understand and use the content.</p>
+  <h2>Felhasználói felület-elemek adatbeviteli céljai (input purposes)</h2>
+	<p>Ez a szakasz a gyakori <a>felhasználói felület-elem</a>ekhez kapcsolódó adatbeviteli célokat sorolja fel. Az alábbi kifejezések nem kötelezően használandó kulcsszavak, hanem olyan célokat képviselnek, amelyeket a weboldal által alkalmazott taxonómiának rögzítenie kell. Amennyiben alkalmazható, a webes tartalom szerzői a választott taxonómia szerint jelölik meg a vezérlőelemeket a szemantikai cél érdekében. Ez lehetőséget ad arra, hogy a felhasználói programok és kisegítő technológiák személyre szabott megjelenítést alkalmazzanak, amely elősegíti a tartalom megértését és használatát több felhasználó számára.</p>
   
-  <p class="note">The list of input type purposes is based on the control purposes defined in the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill"><abbr title="HyperText Markup Language">HTML</abbr> specification's Autofill section</a>, but it is important to understand that a different technology may have some or all of the same concepts defined in its specification and only the concepts that are mapped to the meanings below are required.</p>
+  <p class="note">Az adatbevitel típusainak és céljának listája a <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill"><abbr title="HyperText Markup Language">HTML</abbr> specifikáció automatikus kitöltésről szóló szakaszában</a>, meghatározott vezérlőcélokon alapul, ugyanakkor fontos megérteni, hogy más technológiák is tartalmazhatnak ezekhez hasonló fogalmakat a saját specifikációjukban. Csak azok a fogalmak kötelezőek, amelyek az alábbi jelentésekhez vannak hozzárendelve.</p>
 	    
-  <p>The following input control purposes are intended to relate to the user of the content and pertain only to information related to that individual.</p>
+  <p>Az alábbi adatbevitel-célok a tartalom felhasználójára vonatkoznak, és kizárólag az adott személyhez kapcsolódó információkra terjednek ki.</p>
 
 	<ul>
-		<li><code class="language-html">name</code> - Full name</li>
-		<li><code class="language-html">honorific-prefix</code> - Prefix or title (e.g., "Mr.", "Ms.", "Dr.", "M<sup>lle</sup>")</li>
-		<li><code class="language-html">given-name</code> - Given name (in some Western cultures, also known as the <i>first name</i>)</li>
-		<li><code class="language-html">additional-name</code> - Additional names (in some Western cultures, also known as <i>middle names</i>, forenames other than the first name)</li>
-		<li><code class="language-html">family-name</code> - Family name (in some Western cultures, also known as the <i>last name</i> or <i>surname</i>)</li>
-		<li><code class="language-html">honorific-suffix</code> - Suffix (e.g., "Jr.", "B.Sc.", "MBASW", "II")</li>
-		<li><code class="language-html">nickname</code> - Nickname, screen name, handle: a typically short name used instead of the full name</li>
-		<li><code class="language-html">organization-title</code> - Job title (e.g., "Software Engineer", "Senior Vice President", "Deputy Managing Director")</li>
-		<li><code class="language-html">username</code> - A username</li>
-		<li><code class="language-html">new-password</code> - A new password (e.g., when creating an account or changing a password)</li>
-		<li><code class="language-html">current-password</code> - The current password for the account identified by the <code class="language-html">username</code> field (e.g., when logging in)</li>
-		<li><code class="language-html">organization</code> - Company name corresponding to the person, address, or contact information in the other fields associated with this field</li>
-		<li><code class="language-html">street-address</code> - Street address (multiple lines, newlines preserved)</li>
-		<li><code class="language-html">address-line1</code> - Street address (one line per field, line 1)</li>
-		<li><code class="language-html">address-line2</code> - Street address (one line per field, line 2)</li>
-		<li><code class="language-html">address-line3</code> - Street address (one line per field, line 3)</li>
-		<li><code class="language-html">address-level4</code> - The most fine-grained administrative level, in addresses with four administrative levels</li>
-		<li><code class="language-html">address-level3</code> - The third administrative level, in addresses with three or more administrative levels</li>
-		<li><code class="language-html">address-level2</code> - The second administrative level, in addresses with two or more administrative levels; in the countries with two administrative levels, this would typically be the city, town, village, or other locality within which the relevant street address is found</li>
-		<li><code class="language-html">address-level1</code> - The broadest administrative level in the address, i.e., the province within which the locality is found; for example, in the US, this would be the state; in Switzerland it would be the canton; in the UK, the post town</li>
-		<li><code class="language-html">country</code> - Country code</li>
-		<li><code class="language-html">country-name</code> - Country name</li>
-		<li><code class="language-html">postal-code</code> - Postal code, post code, ZIP code, CEDEX code (if CEDEX, append "CEDEX", and the <i lang="fr">arrondissement</i>, if relevant, to the <code class="language-html">address-level2</code> field)</li>
-		<li><code class="language-html">cc-name</code> - Full name as given on the payment instrument</li>
-		<li><code class="language-html">cc-given-name</code> - Given name as given on the payment instrument (in some Western cultures, also known as the <i>first name</i>)</li>
-		<li><code class="language-html">cc-additional-name</code> - Additional names given on the payment instrument (in some Western cultures, also known as <i>middle names</i>, forenames other than the first name)</li>
-		<li><code class="language-html">cc-family-name</code> - Family name given on the payment instrument (in some Western cultures, also known as the <i>last name</i> or <i>surname</i>)</li>
-		<li><code class="language-html">cc-number</code> - Code identifying the payment instrument (e.g., the credit card number)</li>
-		<li><code class="language-html">cc-exp</code> - Expiration date of the payment instrument</li>
-		<li><code class="language-html">cc-exp-month</code> - Month component of the expiration date of the payment instrument</li>
-		<li><code class="language-html">cc-exp-year</code> - Year component of the expiration date of the payment instrument</li>
-		<li><code class="language-html">cc-csc</code> - Security code for the payment instrument (also known as the card security code (CSC), card validation code (CVC), card verification value (CVV), signature panel code (SPC), credit card ID (CCID), etc)</li>
-		<li><code class="language-html">cc-type</code> - Type of payment instrument</li>
-		<li><code class="language-html">transaction-currency</code> - The currency that the user would prefer the transaction to use</li>
-		<li><code class="language-html">transaction-amount</code> - The amount that the user would like for the transaction (e.g., when entering a bid or sale price)</li>
-		<li><code class="language-html">language</code> - Preferred language</li>
-		<li><code class="language-html">bday</code> - Birthday</li>
-		<li><code class="language-html">bday-day</code> - Day component of birthday</li>
-		<li><code class="language-html">bday-month</code> - Month component of birthday</li>
-		<li><code class="language-html">bday-year</code> - Year component of birthday</li>
-		<li><code class="language-html">sex</code> - Gender identity (e.g., Female, <span lang="sm">Fa’afafine</span>)</li>
-		<li><code class="language-html">url</code> - Home page or other web page corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
-		<li><code class="language-html">photo</code> - Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field</li>
-		<li><code class="language-html">tel</code> - Full telephone number, including country code</li>
-		<li><code class="language-html">tel-country-code</code> - Country code component of the telephone number</li>
-		<li><code class="language-html">tel-national</code> - Telephone number without the country code component, with a country-internal prefix applied if applicable</li>
-		<li><code class="language-html">tel-area-code</code> - Area code component of the telephone number, with a country-internal prefix applied if applicable</li>
-		<li><code class="language-html">tel-local</code> - Telephone number without the country code and area code components</li>
-		<li><code class="language-html">tel-local-prefix</code> - First part of the component of the telephone number that follows the area code, when that component is split into two components</li>
-		<li><code class="language-html">tel-local-suffix</code> - Second part of the component of the telephone number that follows the area code, when that component is split into two components</li>
-		<li><code class="language-html">tel-extension</code> - Telephone number internal extension code</li>
-		<li><code class="language-html">email</code> - E-mail address</li>
-		<li><code class="language-html">impp</code> - <abbr title="Uniform Resource Locator">URL</abbr> representing an instant messaging protocol endpoint (for example, "<code class="language-html">aim:goim?screenname=example</code>" or "<code class="language-html">xmpp:fred@example.net</code>")</li>
+		<li><code class="language-html">name</code> - Teljes név</li>
+		<li><code class="language-html">honorific-prefix</code> - Előtag vagy megszólítás (pl. "Mr.", "Ms.", "Dr.", "M<sup>lle</sup>")</li>
+		<li><code class="language-html">given-name</code> - Utónév (egyes nyugati kultúrákban <i>keresztnév</i> néven ismert)</li>
+		<li><code class="language-html">additional-name</code> - További utónevek (egyes nyugati kultúrákban <i>második keresztnév</i> vagy <i>középső névként</i> ismert)</li>
+		<li><code class="language-html">family-name</code> - Vezetéknév (egyes nyugati kultúrákban </i>családnév</i>)</li>
+		<li><code class="language-html">honorific-suffix</code> - Utótag (pl. „Jr.”, „B.Sc.”, „MBASW”, „II”)</li>
+		<li><code class="language-html">nickname</code> - Becenév, felhasználónév vagy rövid név a teljes név helyett</li>
+		<li><code class="language-html">organization-title</code> - Munkakör (pl. „Szoftvermérnök”, „Ügyvezető alelnök”, „Vezérigazgató-helyettes”)</li>
+		<li><code class="language-html">username</code> - Felhasználónév</li>
+		<li><code class="language-html">new-password</code> - Új jelszó (pl. fiók létrehozásakor vagy jelszó módosításakor)</li>
+		<li><code class="language-html">current-password</code> - A <code class="language-html">username</code> mezőben megadott fiók jelenlegi jelszava (pl. bejelentkezéskor)</li>
+		<li><code class="language-html">organization</code> - A cég neve, amely a személyhez, címhez vagy kapcsolati adatokhoz kapcsolódik</li>
+		<li><code class="language-html">street-address</code> - Cím (utca, házszám, többsoros, sortörések megőrzésével)</li>
+		<li><code class="language-html">address-line1</code> - Cím első sora (egy sor per mező)</li>
+		<li><code class="language-html">address-line2</code> - Cím második sora (egy sor per mező)</li>
+		<li><code class="language-html">address-line3</code> - Cím harmadik sora (egy sor per mező)</li>
+		<li><code class="language-html">address-level4</code> - A legrészletesebb szintű közigazgatási egység négyszintű cím esetén</li>
+		<li><code class="language-html">address-level3</code> - A harmadik közigazgatási szint három vagy több szintű cím esetén</li>
+		<li><code class="language-html">address-level2</code> - A második közigazgatási szint két vagy több szintű cím esetén; országoktól függően ez lehet a város, település vagy más helység, ahol az adott utca található</li>
+		<li><code class="language-html">address-level1</code> - A legfelső közigazgatási szint a címben, például tartomány; az USA-ban ez az állam, Svájcban a kanton, az Egyesült Királyságban pedig a postai város</li>
+		<li><code class="language-html">country</code> - Országkód</li>
+		<li><code class="language-html">country-name</code> - Ország neve</li>
+		<li><code class="language-html">postal-code</code> - Irányítószám, postai kód, ZIP kód, CEDEX kód (CEDEX esetén a „CEDEX” és szükség esetén a <i lang="fr">arrondissement</i> hozzáadandó az <code class="language-html">address-level2</code> mezőhöz)</li>
+		<li><code class="language-html">cc-name</code> - Teljes név, ahogy a fizetési eszközön szerepel</li>
+		<li><code class="language-html">cc-given-name</code> - Utónév a fizetési eszközön (egyes nyugati kultúrákban <i>keresztnév</i> néven ismert)</li>
+		<li><code class="language-html">cc-additional-name</code> - További nevek a fizetési eszközön (egyes nyugati kultúrákban <i>második keresztnév</i> vagy <i>középső névként</i> ismert)</li>
+		<li><code class="language-html">cc-family-name</code> - Vezetéknév a fizetési eszközön((egyes nyugati kultúrákban </i>családnév</i>)</li>
+		<li><code class="language-html">cc-number</code> - A fizetési eszközt azonosító szám (pl. bankkártyaszám)</li>
+		<li><code class="language-html">cc-exp</code> - A fizetési eszköz lejárati dátuma</li>
+		<li><code class="language-html">cc-exp-month</code> - A fizetési eszköz lejárati dátum hónapja</li>
+		<li><code class="language-html">cc-exp-year</code> - A fizetési eszköz lejárati dátum éve</li>
+		<li><code class="language-html">cc-csc</code> - A fizetési eszköz biztonsági kódja (más néven: kártyabiztonsági kód, érvényesítési kód, kártyaellenőrző érték, aláíráspanel-kód, bankkártya-azonosító – angolul: card security code (CSC), card validation code (CVC), card verification value (CVV), signature panel code (SPC), credit card ID (CCID) stb.)</li>
+		<li><code class="language-html">cc-type</code> - Fizetési eszköz típusa</li>
+		<li><code class="language-html">transaction-currency</code> - Az a pénznem, amelyben a felhasználó szeretné lebonyolítani a tranzakciót</li>
+		<li><code class="language-html">transaction-amount</code> - A felhasználó által megadott tranzakciós összeg (pl. ajánlattétel vagy eladási ár esetén)</li>
+		<li><code class="language-html">language</code> - Preferált nyelv</li>
+		<li><code class="language-html">bday</code> - Születési idő</li>
+		<li><code class="language-html">bday-day</code> - A születés napja</li>
+		<li><code class="language-html">bday-month</code> - A születés hónapja</li>
+		<li><code class="language-html">bday-year</code> - A születés éve</li>
+		<li><code class="language-html">sex</code> - Nemi identitás (pl. Nő, <span lang="sm">Fa’afafine</span>)</li>
+		<li><code class="language-html">url</code> - Honlap vagy más weboldal, amely a céghez, személyhez, címhez vagy kapcsolati adatokhoz kapcsolódik</li>
+		<li><code class="language-html">photo</code> - Fotó, piktogram vagy más kép, amely a céghez, személyhez, címhez vagy kapcsolati adatokhoz kapcsolódik</li>
+		<li><code class="language-html">tel</code> - Teljes telefonszám, beleértve az országkódot is</li>
+		<li><code class="language-html">tel-country-code</code> - A telefonszám országkód komponense</li>
+		<li><code class="language-html">tel-national</code> - Telefonszám országkód nélkül, szükség esetén belső előtaggal</li>
+		<li><code class="language-html">tel-area-code</code> - Körzetszám, szükség esetén országon belüli előtaggal</li>
+		<li><code class="language-html">tel-local</code> - Telefonszám országkód és körzetszám nélkül</li>
+		<li><code class="language-html">tel-local-prefix</code> - A körzetszám utáni telefonszám első része, ha az két részre van bontva</li>
+		<li><code class="language-html">tel-local-suffix</code> - A körzetszám utáni telefonszám második része, ha az két részre van bontva</li>
+		<li><code class="language-html">tel-extension</code> - Telefonszámhoz tartozó belső mellék</li>
+		<li><code class="language-html">email</code> - E-mail-cím</li>
+		<li><code class="language-html">impp</code> - Azonnali üzenetküldési protokoll végpontját jelölő <abbr title="Uniform Resource Locator">URL</abbr> (például: "<code class="language-html">aim:goim?screenname=example</code>" vagy "<code class="language-html">xmpp:fred@example.net</code>")</li>
 	</ul>
 	
 </section>
