@@ -17,43 +17,48 @@ function textNoDescendant(el) {
 }
 
 function linkUnderstanding() {
-	var understandingBaseURI;
-	if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
-	else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
-	document.querySelectorAll('.sc,.guideline').forEach(function(node){
-		var heading = textNoDescendant(findHeading(node));
-		var pathFrag = titleToPathFrag(heading);
-		if (node.id == "parsing") pathFrag = "parsing"; // special case parsing
-		var el = document.createElement("div");
-		el.setAttribute("class", "doclinks");
-		el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">Understanding " + heading + "</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
-		if (node.className = "sc") node.insertBefore(el, node.children[2]);
-		if (node.className = "guideline") node.insertBefore(el, node.children[1]);
-	})
+  var understandingBaseURI;
+  if (respecConfig.specStatus == "ED") understandingBaseURI = "../../understanding/";
+  else understandingBaseURI = "https://www.w3.org/WAI/WCAG" + version + "/Understanding/";
+  document.querySelectorAll('.sc,.guideline').forEach(function(node){
+    var heading = textNoDescendant(findHeading(node));
+    //var pathFrag = titleToPathFrag(heading);
+    pathFrag = node.id;
+    if (node.id == "parsing") pathFrag = "parsing"; // special case parsing
+    var el = document.createElement("div");
+    el.setAttribute("class", "doclinks");
+    el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">" + heading + " értelmezése</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
+    if (node.className = "sc") node.insertBefore(el, node.children[2]);
+    if (node.className = "guideline") node.insertBefore(el, node.children[1]);
+  })
 }
 
 function addTextSemantics() {
-	// put level before and parentheses around the conformance level marker
-	document.querySelectorAll('p.conformance-level').forEach(function(node){
-		var level = node.textContent;
-		node.textContent = "(Level " + level + ")";
-	})
-	// put principle in principle headings
-	document.querySelectorAll('section.sc h2 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Principle " + num;
-	})
-	// put guideline in GL headings
-	document.querySelectorAll('section.guideline h3 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Guideline " + num;
-	})
-	// put success criterion in SC headings
-	document.querySelectorAll('section.sc h4 bdi.secno').forEach(function(node){
-		var num = node.textContent;
-		node.textContent = "Success Criterion " + num;
-	})
+  // put level before and parentheses around the conformance level marker
+  document.querySelectorAll('p.conformance-level').forEach(function(node){
+    var level = node.textContent;
+    //node.textContent = "(Level " + level + ")";
+    node.textContent = "(" + level + " szint)";
+  })
+  // put principle in principle headings
+  document.querySelectorAll('section.sc h2 bdi.secno').forEach(function(node){
+    var num = node.textContent;
+    node.textContent = "Principle " + num;
+  })
+  // put guideline in GL headings
+  document.querySelectorAll('section.guideline h3 bdi.secno').forEach(function(node){
+    var num = node.textContent;
+    //node.textContent = "Guideline " + num;
+    node.textContent = num + " Irányelv: ";
+  })
+  // put success criterion in SC headings
+  document.querySelectorAll('section.sc h4 bdi.secno').forEach(function(node){
+    var num = node.textContent;
+    //node.textContent = "Success Criterion " + num;
+    node.textContent = num + " Teljesítési feltétel: ";
+  })
 }
+
 
 function markConformanceLevel() {
 }
@@ -93,14 +98,24 @@ function numberNotes() {
 		// no notes, shouldn't happen
 		if (notes.length == 0) return;
 		// one note, leave alone
-		if (notes.length == 1) return;
+		//if (notes.length == 1) return;
 		// more than one note, number them
+    if (notes.length == 1) {
+      sec.querySelectorAll(".note").forEach(function(note) {
+        var span = note.querySelector(".note-title span");
+        //span.textContent = "Note " + count;
+        //span.textContent = "Note " + count;
+        span.textContent ="Megjegyzés";
+      });
+    }
 		if (notes.length > 1) {
 			var count = 1;
 			sec.querySelectorAll(".note").forEach(function(note) {
 				var span = note.querySelector(".note-title span");
-				span.textContent = "Note " + count;
-				count++;
+				//span.textContent = "Note " + count;
+        //span.textContent = "Note " + count;
+        span.textContent = count + ". megjegyzés";
+        count++;
 			});
 		}
 		sec.noteprocessed = true;
@@ -128,8 +143,8 @@ function renumberExamples() {
 			var rmOrAdd = examples.length == 1 ? "rm" : "add";
 			sec.querySelectorAll(".example").forEach(function(example) {
 				var marker = example.querySelector(".marker");
-				if (rmOrAdd == "rm") marker.textContent = "Example";
-				else marker.textContent = "Example " + count;
+				if (rmOrAdd == "rm") marker.textContent = "Példa";
+				else marker.textContent = count + " Példa";
 				count++;
 			});
 		}
