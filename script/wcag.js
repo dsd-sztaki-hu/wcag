@@ -27,7 +27,7 @@ function linkUnderstanding() {
     if (node.id == "parsing") pathFrag = "parsing"; // special case parsing
     var el = document.createElement("div");
     el.setAttribute("class", "doclinks");
-    el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">" + heading + " értelmezése</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">How to Meet " + heading + "</a>";
+    el.innerHTML = "<a href=\"" + understandingBaseURI + pathFrag + ".html\">" + heading + " értelmezése</a> <span class=\"screenreader\">|</span> <br /><a href=\"https://www.w3.org/WAI/WCAG" + version + "/quickref/#" + pathFrag + "\">" + heading + " megfelelési tanácsok</a>";
     if (node.className = "sc") node.insertBefore(el, node.children[2]);
     if (node.className = "guideline") node.insertBefore(el, node.children[1]);
   })
